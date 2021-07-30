@@ -1,0 +1,231 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/07/30
+
+
+BUGFIX
+
+
+	win32/stdsize.c
+		n_win_stdsize_check_radio() : High-DPI : size calculation
+			OLD : inaccurate
+			NEW : fixed
+			[!] : separated : n_win_stdsize_check() and radio()
+	win32/win_checkbox.c
+		High-DPI : size
+			OLD : too large
+			NEW : fixed
+	win32/win_radiobutton.c
+		High-DPI : size
+			OLD : too large
+			NEW : fixed
+	win32/win_scroller.c
+		non-classic style
+			OLD : disabled state is not beautiful
+			NEW : fixed
+	win32/win_txtbox/17_draw.c
+		WinXP : padding
+			OLD : upper side text is not drawn
+			NEW : fixed
+		DrawText() manual clipping : condition
+			OLD : inaccurate
+			NEW : fixed
+	win32/win_txtbox.c
+		ONELINE : edit : scroll
+			OLD : broken
+			NEW : fixed
+
+	CatPad
+		Search
+			OLD : you cannot edit when a text is longer than an input field
+			NEW : fixed
+			[x] : TxtBox ONELINE causes
+	Neko no Te
+		UI : input fields
+			OLD : you cannot edit when a text is longer than an input field
+			NEW : fixed
+			[x] : TxtBox ONELINE causes
+	Nonnon Paint
+		Grabber : border line
+			OLD : system highlight color
+			NEW : bit-reversed color
+			[!] : for easy to recognize
+		Multi-Layer : Grabber : Blend
+			OLD : different between preview and result
+			NEW : fixed
+		Multi-Layer : basic filters
+			OLD : misbehave
+			NEW : fixed
+		Multi-Layer : Whole Preview
+			OLD : draw error
+			NEW : fixed
+		Grabber : Blend
+			OLD : per-pixel AA will be enabled too
+			NEW : fixed
+		Checkboxes
+			OLD : initial state is unstable
+			NEW : fixed
+			[x] : win32/win_checkbox.c causes
+
+
+NEW_FEATURE
+
+
+	neutral/bmp/color.c
+		n_bmp_composite_pixel()
+			NEW : you can override per-pixel alpha on/off
+			[!] : usage is changed
+	neutral/bmp.c
+		n_bmp_flush()
+			NEW : faster than older in some cases
+			[!] : memset() is much faster
+
+	CatPad
+		TxtBox
+			NEW : tab adder/remover available
+			[!] : Ctrl+Tab will add tabs to all selected lines
+			[!] : Ctrl+Backspace will remove tabs
+	hunyapiyo3
+		sound : when you get a correct answer
+			NEW : remade
+	Nonnon Paint
+		Multi-Layer : Whole Grab : Drop2Save
+			NEW : supported
+		Multi-Layer : Grabber : Whole Grab
+			NEW : faster than older in some cases
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/07/20
+
+
+BUGFIX
+
+
+	win32/win/set.c
+		n_win_set() : when scrollbar is needed
+			OLD : inaccurate in some cases
+			NEW : fixed
+	win32/win_txtbox/17_draw.c
+		small buttons
+			OLD : a caret doesn't blink
+			NEW : fixed
+			[x] : BUGFIX @ 2021/07/10
+		n_win_txtbox_draw_background() : ONELINE
+			OLD : margin will be inaccurate
+			NEW : fixed
+			[x] : BUGFIX @ 2021/07/10
+		WinVista : drag selection : caret
+			OLD : fast blinking
+			NEW : fixed
+
+	_gametest
+		source code : gametest_transition.c
+			OLD : typo : compile error
+			NEW : fixed
+	Nonnon Paint
+		Drop2Save
+			OLD : you cannot save a grabbed area
+			NEW : fixed
+		cursor
+			OLD : not changed until move a cursor
+			NEW : fixed
+			[!] : Quick Eraser and Shift2Zoom
+			[x] : ??? : older versions have not this problem
+
+
+NEW_FEATURE
+
+
+	neutral/bmp.c
+		renamed
+			OLD : pal2rgb()       rgb2pal()
+			NEW : argb2colorref() colorref2argb()
+
+	win32/win_txtbox.c
+		rendering engine
+			NEW : faster than older
+
+	CatPad
+		drag timer interval
+			OLD : 33 msec.
+			NEW :  1 msec.
+			[!] : smoother than older
+	Nonnon Paint
+		Multi-Layer : Grabber
+			NEW : faster than older
+	OrangeCat
+		.fps
+			OLD : 60
+			NEW : 60 * 4
+			[!] : smoother than older
+	Wheel Axl
+		engine
+			NEW : new engine available
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2021/07/10
+
+
+BUGFIX
+
+
+	win32/win_txtbox/17_draw.c
+		n_win_txtbox_draw_background()
+			OLD : margin color is the same of the last line
+			NEW : fixed
+
+	CatPad
+		Input Resizer : smallbuttons : position
+			OLD : inaccurate
+			NEW : fixed
+	Nonnon Paint
+		Multi-Layer : Grabber : basic filters
+			OLD : broken
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win_txtbox/03_string.c
+		n_win_txtbox_tab2space_fast()
+			NEW : faster version
+
+	All
+		TxtBox
+			NEW : faster than older
+	Nonnon Paint
+		Multi-Layer : rendering engine
+			NEW : much lighter than older
+		Multi-Layer : base filter
+			NEW : multi-thread available
+		Multi-Layer : Layer Window : when layer focus is changed
+			NEW : faster than older
+
+
+----------==========----------==========----------==========----------
+
