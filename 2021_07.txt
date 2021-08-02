@@ -12,6 +12,24 @@
 Change Log
 
 
+2021/07/30 #1 : 2021/08/02
+
+
+BUGFIX
+
+
+	win32/win_txtbox/18_selection.c
+		n_win_txtbox_selection_cat() : when a pasted text needs to scroll
+			OLD : misbehave
+			NEW : fixed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/07/30
 
 
