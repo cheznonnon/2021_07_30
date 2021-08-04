@@ -12,6 +12,24 @@
 Change Log
 
 
+2021/07/30 #3 : 2021/08/04
+
+
+BUGFIX
+
+
+	win32/win_txtbox/19_edit.c
+		n_win_txtbox_edit_on_typing() : partial selection auto-scroll
+			OLD : unsupported
+			NEW :   supported
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/07/30 #2 : 2021/08/03
 
 
