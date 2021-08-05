@@ -12,6 +12,32 @@
 Change Log
 
 
+2021/07/30 #4 : 2021/08/05
+
+
+BUGFIX
+
+
+	OrangeCat
+		Info View : when a name is longer than field
+			OLD : misbehave
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win_txtbox/08_scroll.c
+		n_win_txtbox_scroll_tail()
+			NEW : auto-scroll at tail
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/07/30 #3 : 2021/08/04
 
 
