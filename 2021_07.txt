@@ -12,6 +12,29 @@
 Change Log
 
 
+2021/07/30 #5 : 2021/08/06
+
+
+BUGFIX
+
+
+	win32/win_txtbox/07_metrics.c
+		n_win_txtbox_metrics_canvas()
+			OLD : patch code is too strong
+			NEW : limited
+	win32/win_combobox.c
+		combo window
+			OLD : item count is not adjusted
+			NEW : fixed
+			[x] : n_win_txtbox_metrics_canvas() causes
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2021/07/30 #4 : 2021/08/05
 
 
